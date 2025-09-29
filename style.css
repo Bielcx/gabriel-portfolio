@@ -36,6 +36,10 @@ header h1 {
   margin-bottom: 20px;
 }
 
+body.light-mode header h1 {
+  color: #222;
+}
+
 #toggle-theme {
   background: transparent;
   border: 2px solid #00ffe7;
@@ -109,11 +113,4 @@ body.light-mode section h2 {
 
 ul {
   list-style-type: none;
-  padding-left: 0;
-}
-
-li {
-  background: #1a1d2b;
-  margin-bottom: 10px;
-  padding: 12px 16px;
-  border
+  padding
