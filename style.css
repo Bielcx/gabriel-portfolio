@@ -92,25 +92,46 @@ body.light-mode nav a:hover {
   color: #fff;
 }
 
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px auto;
+  max-width: 800px;
 }
 
-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.filtro-btn {
+  background-color: transparent;
+  border: 2px solid #00ffe7;
   color: #00ffe7;
-  border-left: 6px solid #00ffe7;
-  padding-left: 10px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  min-width: 140px;
+  text-align: center;
 }
 
-body.light-mode section h2 {
+.filtro-btn:hover {
+  background-color: #00ffe7;
+  color: #0f1117;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+body.light-mode .filtro-btn {
+  border-color: #222;
   color: #222;
-  border-left-color: #222;
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
+body.light-mode .filtro-btn:hover {
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 0 10px #222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap
