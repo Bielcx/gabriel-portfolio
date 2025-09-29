@@ -1,46 +1,54 @@
-// ✍️ Efeito de digitação no nome
-const texto = "Gabriel Cavalcanti";
-let i = 0;
-function digitar() {
-  if (i < texto.length) {
-    document.getElementById("nome").innerHTML += texto.charAt(i);
-    i++;
-    setTimeout(digitar, 100);
+// Efeito de digitação no nome
+document.addEventListener("DOMContentLoaded", () => {
+  const texto = "Gabriel Cavalcanti";
+  let i = 0;
+  function digitar() {
+    if (i < texto.length) {
+      document.getElementById("nome").innerHTML += texto.charAt(i);
+      i++;
+      setTimeout(digitar, 100);
+    }
   }
-}
-window.onload = digitar;
+  digitar();
 
-// 🌗 Alternância de tema claro/escuro
-document.getElementById("toggle-theme").onclick = () => {
-  document.body.classList.toggle("dark-mode");
-};
+  // 🌗 Alternância de tema claro/escuro
+  const botaoTema = document.getElementById("toggle-theme");
+  botaoTema.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    botaoTema.textContent = document.body.classList.contains("dark-mode")
+      ? "☀️ Modo Claro"
+      : "🌙 Modo Escuro";
+  });
 
-// ✅ Validação de formulário de contato
-document.getElementById("form-contato").onsubmit = function (e) {
-  const nome = document.getElementById("nome-contato").value.trim();
-  const email = document.getElementById("email-contato").value.trim();
-  const mensagem = document.getElementById("mensagem").value.trim();
+  // ✅ Validação de formulário de contato
+  const form = document.getElementById("form-contato");
+  form.addEventListener("submit", (e) => {
+    const nome = document.getElementById("nome-contato").value.trim();
+    const email = document.getElementById("email-contato").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
 
-  if (!nome || !email || !mensagem) {
-    alert("Por favor, preencha todos os campos.");
-    e.preventDefault();
-  }
-};
+    if (!nome || !email || !mensagem) {
+      alert("Por favor, preencha todos os campos.");
+      e.preventDefault();
+    }
+  });
 
-// 🧠 Filtro de certificações por categoria
-const botoesFiltro = document.querySelectorAll(".filtro-btn");
-const secoes = document.querySelectorAll(".cert-section");
+  // 🧠 Filtro de certificações por categoria
+  const botoesFiltro = document.querySelectorAll(".filtro-btn");
+  const secoes = document.querySelectorAll(".cert-section");
 
-botoesFiltro.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const categoria = btn.getAttribute("data-categoria");
+  botoesFiltro.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const categoria = btn.getAttribute("data-categoria");
 
-    secoes.forEach((secao) => {
-      if (categoria === "todos" || secao.id === categoria) {
-        secao.style.display = "block";
-      } else {
-        secao.style.display = "none";
-      }
+      secoes.forEach((secao) => {
+        if (categoria === "todos" || secao.id === categoria) {
+          secao.style.display = "block";
+        } else {
+          secao.style.display = "none";
+        }
+      });
     });
   });
 });
+
