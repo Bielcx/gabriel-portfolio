@@ -1,5 +1,5 @@
-// Efeito de digitação no nome
 document.addEventListener("DOMContentLoaded", () => {
+  // ✍️ Efeito de digitação no nome
   const texto = "Gabriel Cavalcanti";
   let i = 0;
   function digitar() {
@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🌗 Alternância de tema claro/escuro
   const botaoTema = document.getElementById("toggle-theme");
   botaoTema.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    botaoTema.textContent = document.body.classList.contains("dark-mode")
-      ? "☀️ Modo Claro"
-      : "🌙 Modo Escuro";
+    document.body.classList.toggle("light-mode");
+    botaoTema.textContent = document.body.classList.contains("light-mode")
+      ? "🌙 Modo Escuro"
+      : "☀️ Modo Claro";
   });
 
   // ✅ Validação de formulário de contato
@@ -51,4 +51,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
