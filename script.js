@@ -11,13 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   digitar();
 
-  // 🌗 Alternância de tema claro/escuro
+  // 🌗 Alternância de tema claro/escuro com botão tipo interruptor
   const botaoTema = document.getElementById("toggle-theme");
   botaoTema.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
-    botaoTema.textContent = document.body.classList.contains("light-mode")
-      ? "🌙 Modo Escuro"
-      : "☀️ Modo Claro";
   });
 
   // ✅ Validação de formulário de contato
