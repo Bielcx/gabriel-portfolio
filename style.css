@@ -213,7 +213,8 @@ body.light-mode .filtro-btn:hover {
 
 /* Formulário de contato */
 #contato {
-  text-align: left;
+  text-align: center;
+  text-decoration: none;
 }
 
 #contato p {
