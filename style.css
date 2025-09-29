@@ -18,6 +18,7 @@ body.light-mode {
   color: #222;
 }
 
+/* Header e título */
 header {
   position: relative;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -41,26 +42,58 @@ body.light-mode header h1 {
   color: #222;
 }
 
+/* Botão de tema estilo interruptor */
 #toggle-theme {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: transparent;
+  background: none;
   border: none;
-  font-size: 24px;
   cursor: pointer;
-  color: #00ffe7;
-  transition: transform 0.3s ease;
+  padding: 0;
 }
 
-#toggle-theme:hover {
-  transform: scale(1.2);
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #1a1d2b;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  box-shadow: 0 0 6px rgba(0, 255, 231, 0.3);
+  transition: background-color 0.3s ease;
 }
 
-body.light-mode #toggle-theme {
-  color: #222;
+.icon {
+  font-size: 18px;
+  z-index: 2;
 }
 
+.bolinha {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #00ffe7;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+body.light-mode .switch {
+  background-color: #ccc;
+}
+
+body.light-mode .bolinha {
+  left: 33px;
+  background-color: #222;
+}
+
+/* Navegação */
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -98,6 +131,7 @@ body.light-mode nav a:hover {
   color: #fff;
 }
 
+/* Seções */
 section {
   padding: 40px 20px;
   max-width: 900px;
@@ -117,6 +151,7 @@ body.light-mode section h2 {
   border-left-color: #222;
 }
 
+/* Listas */
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -127,4 +162,127 @@ li {
   margin-bottom: 10px;
   padding: 12px 16px;
   border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 255,
+  box-shadow: 0 1px 4px rgba(0, 255, 231, 0.1);
+}
+
+body.light-mode li {
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões de filtro */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.filtro-btn {
+  background-color: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  min-width: 140px;
+  text-align: center;
+}
+
+.filtro-btn:hover {
+  background-color: #00ffe7;
+  color: #0f1117;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+body.light-mode .filtro-btn {
+  border-color: #222;
+  color: #222;
+}
+
+body.light-mode .filtro-btn:hover {
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 0 10px #222;
+}
+
+/* Formulário de contato */
+#contato {
+  text-align: center;
+}
+
+#contato p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#contato a {
+  color: #00ffe7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+
+body.light-mode #contato a {
+  color: #222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1a1d2b;
+  color: #e0e0e0;
+  font-size: 16px;
+  width: 100%;
+}
+
+body.light-mode form input,
+body.light-mode form textarea {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  background-color: #00ffe7;
+  color: #0f1117;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+body.light-mode form button {
+  background-color: #222;
+  color: #fff;
+}
+
