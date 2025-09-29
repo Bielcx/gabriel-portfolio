@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   digitar();
 
+  const body = document.body;
+
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+}
+
   // 🌗 Alternância de tema claro/escuro
   const botaoTema = document.getElementById("toggle-theme");
   botaoTema.addEventListener("click", () => {
