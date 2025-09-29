@@ -7,7 +7,8 @@
 </head>
 <body>
   <header>
-    <h1>Gabriel Cavalcanti</h1>
+    <h1 id="nome"></h1>
+    <button id="toggle-theme">🌙 Alternar Tema</button>
     <nav>
       <ul>
         <li><a href="#sobre">Sobre Mim</a></li>
@@ -40,7 +41,14 @@
     </ul>
   </section>
 
-  <section id="frontend">
+  <div class="filtros">
+    <button class="filtro-btn" data-categoria="todos">Todos</button>
+    <button class="filtro-btn" data-categoria="frontend">Front-end</button>
+    <button class="filtro-btn" data-categoria="backend">Back-end</button>
+    <button class="filtro-btn" data-categoria="infra">Infraestrutura & Cloud</button>
+  </div>
+
+  <section id="frontend" class="cert-section">
     <h2>🎨 Front-end</h2>
     <ul>
       <li>HTML5 & Accessibility – Skillsoft</li>
@@ -56,10 +64,10 @@
     </ul>
   </section>
 
-  <section id="backend">
+  <section id="backend" class="cert-section">
     <h2>🧠 Back-end</h2>
     <ul>
-      <li>Programming Fundamentals: Algorithms, Sorting, & Searching – Skillsoft</li>
+      <li>Programming Fundamentals – Skillsoft</li>
       <li>Algoritmos: Aprenda a programar – FIAP</li>
       <li>Commerce Platform Overview – Skillsoft</li>
       <li>Date and Time, Text, Storage, & Objects – Skillsoft</li>
@@ -67,19 +75,17 @@
     </ul>
   </section>
 
-  <section id="infra">
+  <section id="infra" class="cert-section">
     <h2>🛠️ Infraestrutura & Cloud</h2>
     <ul>
       <li>Microsoft CSP Subscription Software – Microsoft/Lenovo</li>
-      <li>VMware Cloud Foundation (DVMO1001) – Lenovo</li>
-      <li>Cloud Fundamentals, Administration and Solution Architect – FIAP</li>
-      <li>AWS SysOps Associate 2022: Security & Health – Skillsoft</li>
-      <li>Harnessing the Benefits of Platform as a Service – Skillsoft</li>
-      <li>Harnessing the Disruption of Generative AI – Skillsoft</li>
-      <li>Gestão de Infraestrutura de TI – FIAP</li>
-      <li>Red Hat OpenShift: Seller – Red Hat</li>
-      <li>Red Hat OpenShift: Technical Seller – Red Hat</li>
-      <li>Red Hat Portfolio: Foundational – Red Hat</li>
+      <li>VMware Cloud Foundation – Lenovo</li>
+      <li>Cloud Fundamentals – FIAP</li>
+      <li>AWS SysOps Associate – Skillsoft</li>
+      <li>Harnessing PaaS – Skillsoft</li>
+      <li>Generative AI – Skillsoft</li>
+      <li>Infraestrutura de TI – FIAP</li>
+      <li>Red Hat OpenShift – Red Hat</li>
     </ul>
   </section>
 
@@ -96,17 +102,24 @@
     <h2>📚 Metodologias e Fundamentos</h2>
     <ul>
       <li>Blockchain – FIAP</li>
-      <li>Inteligência Artificial e Computacional – FIAP</li>
+      <li>Inteligência Artificial – FIAP</li>
     </ul>
   </section>
 
   <section id="contato">
     <h2>📬 Contato</h2>
-    <p>Você pode me encontrar no <a href="https://www.linkedin.com/in/gabriel-cavalcanti-a23426232/" target="_blank">LinkedIn</a> ou enviar um e-mail para: <strong>biel.cavalcanti1@hotmail.com</strong></p>
+    <form id="form-contato">
+      <input type="text" id="nome-contato" placeholder="Seu nome">
+      <input type="email" id="email-contato" placeholder="Seu e-mail">
+      <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
     <p>&copy; 2025 Gabriel Cavalcanti. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
