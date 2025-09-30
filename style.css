@@ -105,7 +105,8 @@ nav ul {
 nav a {
   text-decoration: none;
   font-weight: bold;
-  border: 2px solid #00ffe7;
+  padding: 10px 20px;
+  border: 0px solid #00ffe7;
   border-radius: 8px;
   color: #00ffe7;
   background-color: transparent;
