@@ -220,6 +220,10 @@ body.light-mode .filtro-btn:hover {
   text-decoration: none;
 }
 
+.linkedin {
+  text-align: center;
+}
+
 #contato p {
   margin-bottom: 20px;
   font-size: 16px;
