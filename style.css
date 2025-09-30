@@ -22,7 +22,6 @@ body.light-mode {
 header {
   position: relative;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  padding: 40px 20px;
   text-align: center;
 }
 
