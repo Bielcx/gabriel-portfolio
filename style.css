@@ -386,3 +386,37 @@ body.light-mode .btn-download-cv:hover {
   margin: 0;
   color: #ccc;
 }
+
+
+/* IDIOMA  */
+
+.sobre-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#sobre h2 {
+  margin: 0; /* Remove margens extras do título */
+  font-size: 24px; /* Ajuste o tamanho do título, se necessário */
+}
+
+#language-selector {
+  display: flex; /* Alinha os botões horizontalmente */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+#language-selector button {
+  background-color: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#language-selector button:hover {
+  background-color: #00ffe7;
+  color: #0f1117;
+}

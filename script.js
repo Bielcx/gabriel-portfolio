@@ -92,3 +92,48 @@ document.addEventListener("DOMContentLoaded", () => {
   // Chama a função para buscar os repositórios
   fetchRepos();
 });
+
+const translations = {
+  pt: {
+    sobre: "👨‍💻 Sobre Mim",
+    sobreText: "Sou estudante de Sistemas de Informação na FIAP e desenvolvedor full-stack com foco em front-end, especializado em criar interfaces intuitivas e eficientes. Tenho experiência prática em suporte técnico, infraestrutura e otimização de processos comerciais. Apaixonado por tecnologia, busco constantemente novos conhecimentos para transformar ideias em soluções digitais de impacto.",
+    curriculo: "Meu Currículo ",
+    // habilidades: "🛠️ Competências Técnicas",
+    // projetos: "PROJETOS QUE VOCÊ VAI ADORAR",
+    // contato: "📬 Contato",
+    // enviar: "Enviar",
+    // carregando: "Carregando repositórios...",
+  },
+  en: {
+    sobre: "👨‍💻 About Me",
+    sobreText: "I am an Information Systems student at FIAP and a full-stack developer with a focus on front-end, specializing in creating intuitive and efficient interfaces. I have hands-on experience in technical support, infrastructure, and optimizing business processes. Passionate about technology, I constantly seek new knowledge to transform ideas into impactful digital solutions.",
+    curriculo: "My Resume",
+    // habilidades: "🛠️ Technical Skills",
+    // projetos: "PROJECTS YOU'LL LOVE",
+    // contato: "📬 Contact",
+    // enviar: "Send",
+    // carregando: "Loading repositories...",
+  },
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const languageButtons = document.querySelectorAll("#language-selector button");
+
+  languageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const lang = button.getAttribute("data-lang");
+      translatePage(lang);
+    });
+  });
+
+  function translatePage(lang) {
+    document.querySelector("#sobre h2").textContent = translations[lang].sobre;
+    document.querySelector("#sobre-texto").textContent = translations[lang].sobreText;
+    document.querySelector(".btn-download-cv").textContent = translations[lang].curriculo;
+    // document.querySelector("#habilidades h2").textContent = translations[lang].habilidades;
+    // document.querySelector("#repositorios h2").textContent = translations[lang].projetos;
+    // document.querySelector("#contato h2").textContent = translations[lang].contato;
+    // document.querySelector("#form-contato button").textContent = translations[lang].enviar;
+    // document.querySelector("#repos-container p").textContent = translations[lang].carregando;
+  }
+});
