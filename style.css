@@ -13,6 +13,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .cert {
   text-align: center;
 }
@@ -123,6 +127,7 @@ nav a:hover {
   background-color: #00ffe7;
   color: #0f1117;
   box-shadow: 0 0 12px #00ffe7;
+  padding: 10px 100px;
 }
 
 body.light-mode nav a {
@@ -293,5 +298,42 @@ form button:hover {
 body.light-mode form button {
   background-color: #222;
   color: #fff;
+}
+
+
+.btn-download-cv {
+  text-decoration: none;;
+  background-color: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  min-width: 140px;
+  text-align: center;;
+}
+
+.btn-download-cv:hover {
+  text-decoration: none !important;
+  background-color: #00ffe7;
+  color: #0f1117 !important;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+body.light-mode .btn-download-cv {
+  border-color: #222;
+  color: #222;
+}
+
+body.light-mode .btn-download-cv:hover {
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 0 10px #222;
+}
+
+#sobre p {
+  margin-bottom: 20px;
 }
 
