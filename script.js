@@ -48,3 +48,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reposContainer = document.getElementById("repos-container");
+
+  // Substitua 'Bielcx' pelo seu nome de usuário no GitHub
+  const githubUsername = "Bielcx";
+  const apiUrl = `https://api.github.com/users/${githubUsername}/repos`;
+
+  // Função para buscar os repositórios
+  async function fetchRepos() {
+    try {
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error("Erro ao buscar repositórios");
+      }
+      const repos = await response.json();
+
+      // Filtra repositórios específicos pelo nome
+    const reposEspecificos = repos.filter((repo) =>
+      ["mochila-viagem", "Robotrex", "Calculadora-IMC-Flutter"].includes(repo.name)
+    );
+
+      // Limpa a mensagem de carregamento
+      reposContainer.innerHTML = "";
+
+      // Exibe os repositórios
+      reposEspecificos.forEach((repo) => {
+        const repoElement = document.createElement("div");
+        repoElement.classList.add("repo");
+        repoElement.innerHTML = `
+          <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+          <p>${repo.description || "Sem descrição disponível."}</p>
+        `;
+        reposContainer.appendChild(repoElement);
+      });
+    } catch (error) {
+      reposContainer.innerHTML = `<p>Erro ao carregar repositórios.</p>`;
+      console.error(error);
+    }
+  }
+
+  // Chama a função para buscar os repositórios
+  fetchRepos();
+});
